@@ -15,6 +15,7 @@ gem 'bcrypt',     '~> 3.1.7'
 gem 'image_processing', '~> 1.2'
 gem 'dotenv-rails'
 gem 'sidekiq'
+gem 'redis', '~> 4.0', require: ['redis', 'redis/connection/hiredis']
 
 gem 'bootsnap', '>= 1.4.2', require: false
 

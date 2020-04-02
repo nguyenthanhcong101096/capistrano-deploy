@@ -5,7 +5,7 @@ require 'sidekiq/web'
 
 redis_params = {
   # url: ENV['REDIS_URL_SIDEKIQ']
-  { url: 'redis://localhost:6379/0' }
+  url: 'redis://localhost:6379/0'
 }
 
 # Stats:
