@@ -56,7 +56,7 @@ namespace :deploy do
       execute "mkdir -p #{shared_path}/config/puma"
       upload!('package.json', "#{shared_path}/package.json")
       upload!("config/puma/#{fetch(:stage)}.rb", "#{shared_path}/config/puma/#{fetch(:stage)}.rb")
-      upload!(".env.#{fetch(:stage)}", "#{shared_path}/.env.#{fetch(:stage)}")
+      # upload!(".env.#{fetch(:stage)}", "#{shared_path}/.env.#{fetch(:stage)}")
       upload!('config/database.yml', "#{shared_path}/config/database.yml")
       upload!('config/master.key', "#{shared_path}/config/master.key")
     end
