@@ -46,7 +46,7 @@ set :puma_role, :web
 set :puma_workers, 2
 
 # capistrano/sidekiq
-set :sidekiq_config, 'config/sidekiq.yml'
+# set :sidekiq_config, 'config/sidekiq.yml'
 
 # Global options
 # --------------
