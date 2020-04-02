@@ -15,7 +15,7 @@ set :repo_url, 'git@github.com:1PACVietnam/wakuwaku.git'
 set :deploy_to, '/var/www/project_app/public_html'
 
 # capistrano-rails
-set :rails_env, :staging
+set :rails_env, :production
 set :migration_role, :web
 
 set :assets_prefix, 'packs'

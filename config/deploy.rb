@@ -52,6 +52,7 @@ namespace :deploy do
   desc 'Upload yml file.'
   task :upload_yml do
     on roles(:app) do
+      execute "mkdir -p #{deploy_to}/current"
       execute "mkdir -p #{shared_path}/config"
       execute "mkdir -p #{shared_path}/config/puma"
       upload!('package.json', "#{shared_path}/package.json")
