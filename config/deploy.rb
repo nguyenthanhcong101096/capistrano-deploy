@@ -94,6 +94,6 @@ task :log do
   end
 end
 
-before('deploy', 'puma:stop')
+# before('deploy', 'puma:stop')
 
-after('deploy:updated', 'assets:precompile')
+# after('deploy:updated', 'assets:precompile')
