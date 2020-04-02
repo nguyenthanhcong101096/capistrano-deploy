@@ -6,8 +6,8 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 development:
   <<: *default
-  database: wakuwaku_development
-  # database: wakuwaku_production
+  database: project_development
+  # database: project_production
   # username: wakuwaku
   # password: onepac189
   # connect_timeout: 1
@@ -18,18 +18,18 @@ development:
   #   statement_timeout: 5000
 test:
   <<: *default
-  database: wakuwaku_test
+  database: project_test
 staging:
     <<: *default
-    database: wakuwaku_staging
-    username: <%= ENV['DATABASE_USER'] %>
-    password: <%= ENV['DATABASE_PASSWORD'] %>
+    database: project_staging
+    username: app
+    password: password
     connect_timeout: 1
     checkout_timeout: 5
     variables:
       statement_timeout: 5000
 production:
   <<: *default
-  database: wakuwaku_production
-  username: wakuwaku
-  password: <%= ENV['WAKUWAKU_DATABASE_PASSWORD'] %>
+  database: project_production
+  username: app
+  password: password
