@@ -9,7 +9,7 @@ set :user, 'app'
 server '127.0.0.1', user: 'app', roles: %w[app web]
 
 set :application, 'wakuwaku'
-set :repo_url, 'git@github.com:1PACVietnam/wakuwaku.git'
+set :repo_url, 'git@github.com:nguyenthanhcong101096/capistrano_rails.git'
 
 # Default branch is :master
 branch = ENV['BRANCH'] ? ENV['BRANCH'] : 'develop'
