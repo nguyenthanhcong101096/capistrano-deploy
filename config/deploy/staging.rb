@@ -6,7 +6,6 @@ set :stage, :staging
 set :server, '127.0.0.1'
 set :user, 'app'
 
-server '127.0.0.1', user: 'app', roles: %w[app web], port: 222
 server '127.0.0.1', user: 'app', roles: %w[app web]
 
 set :application, 'wakuwaku'
