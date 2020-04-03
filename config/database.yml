@@ -21,7 +21,7 @@ test:
   database: project_test
 staging:
     <<: *default
-    database: project_staging
+    database: project
     username: app
     password: password
     connect_timeout: 1
@@ -30,6 +30,10 @@ staging:
       statement_timeout: 5000
 production:
   <<: *default
-  database: project_production
+  database: project
   username: app
   password: password
+  connect_timeout: 1
+  checkout_timeout: 5
+  variables:
+    statement_timeout: 5000
