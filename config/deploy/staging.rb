@@ -6,13 +6,14 @@ set :stage, :staging
 set :server, '127.0.0.1'
 set :user, 'app'
 
+server '127.0.0.1', user: 'app', roles: %w[app web], port: 222
 server '127.0.0.1', user: 'app', roles: %w[app web]
 
 set :application, 'wakuwaku'
 set :repo_url, 'git@github.com:nguyenthanhcong101096/capistrano_rails.git'
 
 # Default branch is :master
-branch = ENV['BRANCH'] ? ENV['BRANCH'] : 'develop'
+branch = ENV['BRANCH'] ? ENV['BRANCH'] : 'master'
 set :branch, branch
 
 # Default deploy_to directory is /var/www/my_app_name

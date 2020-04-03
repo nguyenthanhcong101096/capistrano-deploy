@@ -1,0 +1,35 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+development:
+  <<: *default
+  database: project_development
+  # database: project_production
+  # username: wakuwaku
+  # password: onepac189
+  # connect_timeout: 1
+  # checkout_timeout: 5
+  # host: dbwakuwaku.ct5if1nssaos.ap-northeast-1.rds.amazonaws.com
+  # port: 5432
+  # variables:
+  #   statement_timeout: 5000
+test:
+  <<: *default
+  database: project_test
+staging:
+    <<: *default
+    database: project_staging
+    username: app
+    password: password
+    connect_timeout: 1
+    checkout_timeout: 5
+    variables:
+      statement_timeout: 5000
+production:
+  <<: *default
+  database: project_production
+  username: app
+  password: password
