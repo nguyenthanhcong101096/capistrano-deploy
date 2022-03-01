@@ -12,7 +12,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder',   '~> 2.7'
 gem 'redis',      '~> 4.0'
 gem 'bcrypt',     '~> 3.1.7'
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 gem 'dotenv-rails'
 
 gem 'whenever', require: false
